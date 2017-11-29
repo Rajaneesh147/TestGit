@@ -3,3 +3,782 @@ Email id: rajaneeshsingh147@gmail.com
 Country : India
 
 Hello Git users how are you...?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package com.hack.fest.entities;
+
+public class PersonalDetails {
+	
+	private String pan;
+	private	String surName;
+	private	String mName;
+	private	String fName;
+	private	String dob;
+	
+	public String getPan() {
+		return pan;
+	}
+	public void setPan(String pan) {
+		this.pan = pan;
+	}
+	public String getSurName() {
+		return surName;
+	}
+	public void setSurName(String surName) {
+		this.surName = surName;
+	}
+	public String getmName() {
+		return mName;
+	}
+	public void setmName(String mName) {
+		this.mName = mName;
+	}
+	public String getfName() {
+		return fName;
+	}
+	public void setfName(String fName) {
+		this.fName = fName;
+	}
+	public String getDob() {
+		return dob;
+	}
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
+	@Override
+	public String toString() {
+		return "PersonalDetails [pan=" + pan + ", surName=" + surName + ", mName=" + mName + ", fName=" + fName
+				+ ", dob=" + dob + "]";
+	}
+	
+	
+	
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////
+
+
+
+
+
+
+
+
+
+
+
+package com.hack.fest.entities;
+
+public class RegistrationForm {
+	
+	private PersonalDetails personalDtl;
+	
+	private ContactDtl contactDtl;
+	
+	private AddressDtl addressDtl;
+
+	public PersonalDetails getPersonalDtl() {
+		return personalDtl;
+	}
+
+	public void setPersonalDtl(PersonalDetails personalDtl) {
+		this.personalDtl = personalDtl;
+	}
+
+	public ContactDtl getContactDtl() {
+		return contactDtl;
+	}
+
+	public void setContactDtl(ContactDtl contactDtl) {
+		this.contactDtl = contactDtl;
+	}
+
+	public AddressDtl getAddressDtl() {
+		return addressDtl;
+	}
+
+	public void setAddressDtl(AddressDtl addressDtl) {
+		this.addressDtl = addressDtl;
+	}
+
+	@Override
+	public String toString() {
+		return "RegistrationForm [personalDtl=" + personalDtl + ", contactDtl=" + contactDtl + ", addressDtl="
+				+ addressDtl + "]";
+	}
+	
+	
+	
+	
+
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package com.hack.fest.entities;
+
+public class AddressDtl {
+	
+	private String flat;
+	private String streetTownCity;
+	private String locality;
+	private String state;
+	private String country;
+	private String pincode;
+	public String getFlat() {
+		return flat;
+	}
+	public void setFlat(String flat) {
+		this.flat = flat;
+	}
+	public String getStreetTownCity() {
+		return streetTownCity;
+	}
+	public void setStreetTownCity(String streetTownCity) {
+		this.streetTownCity = streetTownCity;
+	}
+	public String getLocality() {
+		return locality;
+	}
+	public void setLocality(String locality) {
+		this.locality = locality;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	public String getCountry() {
+		return country;
+	}
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	public String getPincode() {
+		return pincode;
+	}
+	public void setPincode(String pincode) {
+		this.pincode = pincode;
+	}
+	
+	
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package com.hack.fest.entities;
+
+public class ContactDtl {
+	
+	private String priMobilenumber;
+	private String secMobileNumber;
+	private String priEmailId;
+	private String secEmailId;
+	
+	public String getPriMobilenumber() {
+		return priMobilenumber;
+	}
+	public void setPriMobilenumber(String priMobilenumber) {
+		this.priMobilenumber = priMobilenumber;
+	}
+	public String getSecMobileNumber() {
+		return secMobileNumber;
+	}
+	public void setSecMobileNumber(String secMobileNumber) {
+		this.secMobileNumber = secMobileNumber;
+	}
+	public String getPriEmailId() {
+		return priEmailId;
+	}
+	public void setPriEmailId(String priEmailId) {
+		this.priEmailId = priEmailId;
+	}
+	public String getSecEmailId() {
+		return secEmailId;
+	}
+	public void setSecEmailId(String secEmailId) {
+		this.secEmailId = secEmailId;
+	}
+	@Override
+	public String toString() {
+		return "ContactDtl [priMobilenumber=" + priMobilenumber + ", secMobileNumber=" + secMobileNumber
+				+ ", priEmailId=" + priEmailId + ", secEmailId=" + secEmailId + "]";
+	}
+	
+	
+	
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*package com.hack.fest.entities;
+
+import java.sql.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+//@Entity 
+//@Table(name = "PAN_DTLS")
+public class PanDtl {
+
+@Id
+@Column(name = "PAN")
+private String pan;
+
+@Column(name = "SUR_NAME")
+private	String surname;
+
+@Column(name = "M_NAME")
+private	String middle_name;
+
+@Column(name = "F_NAME")
+private	String first_name;
+
+@Column(name = "DOB")
+private	Date dob;
+
+
+private String residentilas_status;
+
+
+public String getPan() {
+	return pan;
+}
+
+
+public void setPan(String pan) {
+	this.pan = pan;
+}
+
+
+public String getSurname() {
+	return surname;
+}
+
+
+public void setSurname(String surname) {
+	this.surname = surname;
+}
+
+
+public String getMiddle_name() {
+	return middle_name;
+}
+
+
+public void setMiddle_name(String middle_name) {
+	this.middle_name = middle_name;
+}
+
+
+public String getFirst_name() {
+	return first_name;
+}
+
+
+public void setFirst_name(String first_name) {
+	this.first_name = first_name;
+}
+
+
+public Date getDob() {
+	return dob;
+}
+
+
+public void setDob(Date dob) {
+	this.dob = dob;
+}
+
+
+public String getResidentilas_status() {
+	return residentilas_status;
+}
+
+
+public void setResidentilas_status(String residentilas_status) {
+	this.residentilas_status = residentilas_status;
+}
+
+
+@Override
+public String toString() {
+	return "PanDtl [pan=" + pan + ", surname=" + surname + ", middle_name=" + middle_name + ", first_name=" + first_name
+			+ ", dob=" + dob + ", residentilas_status=" + residentilas_status + "]";
+}
+
+
+
+
+
+
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package com.hack.fest.entities;
+
+
+public class Panvalidate {
+	
+	private String pan;
+	private	String surname;
+	/*private	String middle_name;
+	private	String first_name;*/
+	private	String dob;
+	private String residentilas_status;
+	public String getPan() {
+		return pan;
+	}
+	public void setPan(String pan) {
+		this.pan = pan;
+	}
+	public String getSurname() {
+		return surname;
+	}
+	public void setSurname(String surname) {
+		this.surname = surname;
+	}
+	/*public String getMiddle_name() {
+		return middle_name;
+	}
+	public void setMiddle_name(String middle_name) {
+		this.middle_name = middle_name;
+	}
+	public String getFirst_name() {
+		return first_name;
+	}
+	public void setFirst_name(String first_name) {
+		this.first_name = first_name;
+	}*/
+	
+
+	public String getDob() {
+		return dob;
+	}
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
+	public String getResidentilas_status() {
+		return residentilas_status;
+	}
+	public void setResidentilas_status(String residentilas_status) {
+		this.residentilas_status = residentilas_status;
+	}
+	@Override
+	public String toString() {
+		return "Panvalidate [pan=" + pan + ", surname=" + surname + ", dob=" + dob + ", residentilas_status="
+				+ residentilas_status + "]";
+	}
+
+	
+
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+
+	"pan":"AAAPA2016A",
+	"surname":"Singh",
+	"dob":"01-10-1990",
+	"residentilas_status":"RES"
+
+}
+
+
+
+AAAPA2016A^Singh^01-10-1990^RES
+
+
+{
+"personalDtl":{
+"pan":"AAAPA2016A",
+"surName":"Singh",
+"mName":"Kumar",
+"fName":"Priya",	
+"dob":"01-10-1990"
+
+},
+"contactDtl":{
+
+"priMobilenumber":"9451200147",
+"secMobileNumber":"7042910086",
+"priEmailId":"rajaneeshsingh147@gmail.com",
+"secEmailId":"rajaneeshsingh1993@gmail.com"
+
+},
+"addressDtl":{
+
+"flat":"59",
+"streetTownCity":"309",
+"locality":"Green House Layout",
+"state":"Karnataka",
+"country":"India",	
+"pincode":"560100"
+
+}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+package com.hack.fest.registration;
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.hack.fest.entities.Panvalidate;
+import com.hack.fest.entities.RegistrationForm;
+
+@RestController
+public class Controller {
+	
+	//@Autowired
+	//PanRepositry panRepositry;
+
+
+
+	@PostMapping("/verifyBasic")
+	@ResponseBody
+	public void verifyBasicDetails(@RequestBody Panvalidate panBasicDtl, HttpServletResponse response) {
+		
+		//Panvalidate panValidate = panRepositry.FindByPan(panBasicDtl.getPan());
+		
+		System.out.println(panBasicDtl);
+		
+		/*if(panDbData==null){
+			//throw exception for pan not found
+			response.setStatus(0);
+		}
+		else
+		{*/
+			if(!panBasicDtl.getSurname().equals("Singh")){
+				// throw surname mismatch error
+			}
+			panBasicDtl.getDob().equals("01-10-1990");
+			//throw dob mismatch error
+		//}
+		String registrationToken = panBasicDtl.getPan()+"^"+panBasicDtl.getSurname()+"^"+panBasicDtl.getDob()+"^"+panBasicDtl.getResidentilas_status();
+		response.setHeader("Authorization", registrationToken);
+
+	}
+	
+	
+	@PostMapping("/SubmitRegistrationDtl")
+	public void submitRegistrationDtl(HttpServletRequest request, HttpServletResponse response) {
+		
+		String token = request.getHeader("Authorization");
+		
+		System.out.println("token "+token);
+		
+		if(!"AAAPA2016A^Singh^01-10-1990^RES".equals(token)){
+			
+			response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+			
+		}else{
+			
+			//RegistrationForm regDtl = new ObjectMapper().readValue(request.getInputStream().toString(), RegistrationForm.class);
+			
+			//System.out.println(regDtl);
+			
+			response.setStatus(HttpServletResponse.SC_ACCEPTED);
+		}
+		
+	}
+	
+
+	
+	
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+package com.hack.fest.registration;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class RegistrationApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(RegistrationApplication.class, args);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package com.hack.fest.repositries;
+
+/*@RepositoryRestResource
+public interface PanRepositry extends CrudRepository<PanDtl,String>{
+	
+	PanDtl FindByPan(String pan);
+
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.hack.fest</groupId>
+	<artifactId>registration</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>registration</name>
+	<description>Demo project for Spring Boot</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.8.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+			<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-rest</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>
